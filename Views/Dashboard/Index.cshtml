@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="card shadow p-4">
+    <h1 class="text-success">Login Successful!</h1>
+    <p class="lead">Welcome to the Student Dashboard.</p>
+    <p>You have successfully signed in using Microsoft Entra ID.</p>
+    <hr />
+    <p><strong>Signed-in user:</strong> @User.Identity?.Name</p>
+    <a asp-controller="Account"
+       asp-action="Logout"
+       class="btn btn-danger">Sign Out</a>
+</div>
